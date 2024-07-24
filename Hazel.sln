@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30523.141
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hazel", "Hazel\Hazel.csproj", "{02CFBD30-D77D-400F-94B2-700F60EFDD7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hazel", "Hazel\Hazel.csproj", "{02CFBD30-D77D-400F-94B2-700F60EFDD7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hazel.UnitTests", "Hazel.UnitTests\Hazel.UnitTests.csproj", "{1394E4CA-E17A-42F5-9216-8046ACA8D16B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hazel.UnitTests", "Hazel.UnitTests\Hazel.UnitTests.csproj", "{1394E4CA-E17A-42F5-9216-8046ACA8D16B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hazel.Hosting", "Hazel.Hosting\Hazel.Hosting.csproj", "{A8D22F4B-572A-4A6E-8817-DA27888DE6FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hazel.Sdk", "Hazel.Sdk\Hazel.Sdk.csproj", "{D1220E13-EC63-4949-A9B9-14226D77FC23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{1394E4CA-E17A-42F5-9216-8046ACA8D16B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1394E4CA-E17A-42F5-9216-8046ACA8D16B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1394E4CA-E17A-42F5-9216-8046ACA8D16B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8D22F4B-572A-4A6E-8817-DA27888DE6FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8D22F4B-572A-4A6E-8817-DA27888DE6FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8D22F4B-572A-4A6E-8817-DA27888DE6FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8D22F4B-572A-4A6E-8817-DA27888DE6FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1220E13-EC63-4949-A9B9-14226D77FC23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1220E13-EC63-4949-A9B9-14226D77FC23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1220E13-EC63-4949-A9B9-14226D77FC23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1220E13-EC63-4949-A9B9-14226D77FC23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

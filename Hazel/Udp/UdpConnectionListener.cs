@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -26,7 +27,7 @@ namespace Hazel.Udp
         public override int ConnectionCount { get { return this.allConnections.Count; } }
         public override int ReceiveQueueLength => throw new NotImplementedException();
         public override int SendQueueLength => throw new NotImplementedException();
-
+        public IEnumerable<UdpConnection> Connections => allConnections.Values;
         /// <summary>
         ///     Creates a new UdpConnectionListener for the given <see cref="IPAddress"/>, port and <see cref="IPMode"/>.
         /// </summary>
@@ -38,10 +39,10 @@ namespace Hazel.Udp
             this.IPMode = ipMode;
 
             this.socket = UdpConnection.CreateSocket(this.IPMode);
-            
+
             socket.ReceiveBufferSize = SendReceiveBufferSize;
             socket.SendBufferSize = SendReceiveBufferSize;
-            
+
             reliablePacketTimer = new Timer(ManageReliablePackets, null, 100, Timeout.Infinite);
         }
 
@@ -49,7 +50,7 @@ namespace Hazel.Udp
         {
             this.Dispose(false);
         }
-        
+
         private void ManageReliablePackets(object state)
         {
             foreach (var kvp in this.allConnections)
@@ -57,6 +58,7 @@ namespace Hazel.Udp
                 var sock = kvp.Value;
                 sock.ManageReliablePackets();
             }
+
 
             try
             {
